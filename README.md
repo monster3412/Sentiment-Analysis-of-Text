@@ -1,4 +1,5 @@
 🎬 Text Sentiment Analysis Model for Movie Reviews
+
 Модель для классификации тональности текстовых отзывов о фильмах на положительные (positive) или отрицательные (negative) с высокой точностью.
 
 📌 Пример работы
@@ -15,21 +16,35 @@ json
 } 
 
 📊 О модели
+
 Архитектура
+
+
 🔹 Embedding Layer (vocab_size, embedding_dim, input_length=max_length)
+
 🔹 SpatialDropout1D (0.39)
+
 🔹 Bidirectional(GRU(128)) (return_sequences=True, recurrent_dropout=0.3, dropout=0.37)
+
 🔹 LayerNormalization()
+
 🔹 Dropout(0.55)
+
 🔹 Bidirectional(GRU(64))
+
 🔹 LayerNormalization()
+
 🔹 Dense(64, activation='swish')
+
 🔹 Dropout(0.4)
+
 🔹 Dense(2, activation='softmax')
 
 Оптимизация
 🔸 Optimizer: Adam (learning_rate=0.001)
+
 🔸 Loss: categorical_crossentropy
+
 🔸 Metrics: accuracy
 
 Метрики на тестовых данных
@@ -42,8 +57,11 @@ json
 ✔ Сбалансированные классы (50% positive, 50% negative)
 
 🚀 Быстрый запуск
+
 Google Colab
+
 📥 Скачайте ноутбук:
+
 🔗 Использование_модели__Анализ_тональности_текста_ (1).ipynb
 
 📌 Запустите в Google Colab( В нем будет загружена модель, токенизатор и параметры)

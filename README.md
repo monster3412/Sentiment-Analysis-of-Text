@@ -41,6 +41,7 @@ json
 🔹 Dense(2, activation='softmax')
 
 Оптимизация
+
 🔸 Optimizer: Adam (learning_rate=0.001)
 
 🔸 Loss: categorical_crossentropy

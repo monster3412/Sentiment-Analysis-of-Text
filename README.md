@@ -8,7 +8,7 @@
 
 
 **Прогноз модели:**
-```json
+json
 {
   "sentiment": "positive",
   "confidence": 0.96

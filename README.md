@@ -19,44 +19,44 @@ json
 
 Архитектура:
 
-Embedding Layer ( vocab_size, embedding_dim, input_length=max_length)
+1) Embedding Layer ( vocab_size, embedding_dim, input_length=max_length)
 
-SpatialDropout1D(0.39))
+2) SpatialDropout1D(0.39))
 
-Bidirectional(GRU(128, return_sequences=True, recurrent_dropout=0.3, dropout=0.37))
+3) Bidirectional(GRU(128, return_sequences=True, recurrent_dropout=0.3, dropout=0.37))
 
-LayerNormalization())
+4) LayerNormalization())
 
-Dropout(0.55))
+5) Dropout(0.55))
 
-Bidirectional(GRU(64)))
+6) Bidirectional(GRU(64)))
 
-LayerNormalization())
+7) LayerNormalization())
 
 
-Dense(64, activation='swish')
+8) Dense(64, activation='swish')
 
-Dropout(0.4)
+9) Dropout(0.4)
 
-Dense(y_train_cat.shape[1], activation='softmax')
+10) Dense(y_train_cat.shape[1], activation='softmax')
 
-optimizer - Adam
+11) optimizer - Adam
 
-learning_rate=0.001
+12) learning_rate=0.001
 
-loss-categorical_crossentropy,
+13)loss-categorical_crossentropy,
 
-metrics-accuracy
+14) metrics-accuracy
 
 
 
 Метрики на тестовых данных:
 
-Метрика	Значение
-Accuracy	0.897
-Loss	0.263
+Метрика:	    Значение:
+Accuracy	     0.897
+Loss	         0.263
 
-Датасет
+Датасет:
 Модель обучена на IMDB Movie Reviews Dataset с Kaggle:
 
 35,000 отзывов из 50000 возможных
